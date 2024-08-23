@@ -112,9 +112,12 @@ p{
 }
 
 #flag-container {
-    width: 80%;
-    max-width: 40em;
-    height: auto;
+    margin: 0 auto;
+    align-items: center;
+    max-width: 300px;
+    max-height: auto;
+    border-radius: 5px;
+    margin: 10px 0;
 }
 
 #score {
