@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!--css link-->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--favicon-->
+    <link rel="icon" href="assets/images/logo.png">
 
     <title>Geography</title>
 </head>
@@ -12,21 +16,44 @@
 
     <header>
         <div id="headings-content-container">
+            <img id="logo" src="assets/images/logo.png" alt="logo">
             <h1>GEOGRAPHY QUIZ</h1>
         </div>
     </header>
 
     <main>
-        <section id="game-container">
+        <!-- Home page section screen with welcome message and instruction -->
+        <div class="container" id="game-container">
             <h2>Welcome to the Flags Geography Quiz!</h2>
 
             <p>This game will test your geography knowledge by guessing the flag correctly. Let's play!</p>
 
             <p>The game goes as follows - when you click the play button a random flag will display on the screen, there will be four options of countries and you will click one to try to guess the correct flag. There will be 25 flags and you will try to guess as many correct as possible. Now that you know how the game works let's put you to the test. Good luck!</p>
 
+            <div class="area">
+                <h3>Are you ready?</h3>
+            </div>
+
             <button class="buttons" id="game-button" onclick="">PLAY</button>
 
-        </section>
+        </div>
+
+        <div class="hide" id="gameplay-container">
+
+            <div>
+                <h2>What flag is this?</h2>
+            </div>
+
+            <img id="flag-image" alt="Random flag image">
+
+            <div id="answers-buttons-container">
+                <button class="answers-buttons buttons">flag 1</button>
+                <button class="answers-buttons buttons">flag 2</button>
+                <button class="answers-buttons buttons">flag 3</button>
+                <button class="answers-buttons buttons">flag 4</button>
+            </div>
+
+        </div>
     </main>
     
     <footer>

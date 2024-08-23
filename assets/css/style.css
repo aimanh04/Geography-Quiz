@@ -75,6 +75,15 @@ p{
     text-align: center;
 }
 
+/* Hide div page*/
+.hide {
+    display: none;
+}
+
+.answers-buttons {
+
+}
+
 #headings-content-container {
     display: flex;
     flex-direction: column;
@@ -85,7 +94,7 @@ p{
     padding: 1rem;
 }
 
-#game-container{
+.container{
     background-color: var(--grey);
     height: 100%;
     width: 100%;
