@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Test your geography knowledge of world flags with this cool fun interactive game. Learn about the world and countries around the globe.">
+    <meta name="keywords" content="world flags, country, countries, geography, quiz game, guessing game, flag guessing game, learn flags, country flags">
 
     <!--css link-->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -16,7 +18,9 @@
 
     <header>
         <div id="headings-content-container">
-            <h1>GEOGRAPHY QUIZ</h1>
+            <h1>
+                GEOGRAPHY QUIZ
+            </h1>
         </div>
     </header>
 
@@ -37,21 +41,36 @@
 
         </div>
 
+        <!--Gameplay-->
         <div class="hide" id="gameplay-container">
 
             <div>
                 <h2>What flag is this?</h2>
             </div>
-
-            <img id="flag-image" alt="Random flag image">
-
-            <div id="answers-buttons-container">
-                <button class="answers-buttons buttons">flag 1</button>
-                <button class="answers-buttons buttons">flag 2</button>
-                <button class="answers-buttons buttons">flag 3</button>
-                <button class="answers-buttons buttons">flag 4</button>
+            <!--Display flag image-->
+            <div>
+                <img id="flag-container" src="" alt="Random flag image">
             </div>
 
+            <div id="answers-buttons-container">
+                <button class="option buttons" onclick="checkAnswer(this)">flag 1</button>
+                <button class="option buttons" onclick="checkAnswer(this)">flag 2</button>
+                <button class="option buttons" onclick="checkAnswer(this)">flag 3</button>
+                <button class="option buttons" onclick="checkAnswer(this)">flag 4</button>
+
+                <!--Display player score-->
+            <div id="score">Score: 0</div>
+
+            <!--Display the current flag of total flags-->
+            <div id="total-flags">Flags: 0 / 0</div>
+
+            <div class="message"></div>
+
+            <!--Play again button-->
+            <button id="play-again" onClick="playAgain()" style="display: none;">
+                <img src="assets/images/repeat.png" alt="Play again" width="40px" height="40px">
+            </button>
+            </div>
         </div>
     </main>
     
