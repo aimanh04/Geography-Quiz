@@ -73,6 +73,12 @@ p{
     font-weight: 700;
     font-size: 18px;
     text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.buttons:hover {
+    transform: scale(0.9);
 }
 
 /* Hide div page*/
@@ -103,6 +109,49 @@ p{
     padding: 1em 1em;
     border: 5px solid black;
     border-radius: 10px;
+}
+
+#flag-container {
+    width: 80%;
+    max-width: 40em;
+    height: auto;
+}
+
+#score {
+    font-size: 20px;
+    margin: 10px 32%;
+    color: #fff;
+    background-color: var(--accent);
+    border-radius: 6px;
+    padding: 2px 0;
+}
+
+#total-flags {
+    font-size: 20px;
+    margin: 10px 0;
+    color: black;
+}
+
+#play-again {
+    cursor: pointer;
+    width: 40px;
+    border: none;
+    background-color: transparent;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.2s ease;
+}
+
+#play-again:hover {
+    transform: scale(1.1);
+}
+
+.message.correct {
+    color: green;
+}
+
+.message.wrong {
+    color: red;
 }
 
 /* Media query - tablets and larger (768px) */
