@@ -1000,3 +1000,40 @@ const flags = [{
     img: 'assets/images/flags/zw.png'
 }
 ];
+let homePage = document.getElementById('game-container');
+let gameContainer = document.getElementById('gameplay-container');
+let playButton = document.getElementById('game-button');
+let homeButton = document.getElementById('home-button');
+let restartButton = document.getElementById('play-again');
+
+// Adding event listeners to buttons to start game play or bring back to home screen
+let buttons = document.getElementsByTagName("button");
+
+/**
+ * Event listener for the buttons, when first button(play button) is clicked the homePage Div is hidden and 
+ * the game container(gameplay) display is blocked so the gameplay shows up.
+ * Else if home button on footer is clicked it redirects user back to home page and
+ * the game container(gameplay) is blocked again.
+ */
+for (let button of buttons) {
+    button.addEventListener("click", function() {
+        if (this.getAttribute("id") === "game-button"){
+            homePage.style.display = "none";
+            gameContainer.style.display = "block";
+            runGame();
+        } else if (this.getAttribute("id") === "home-button"){
+            gameContainer.style.display = "none";
+            homePage.style.display = "";
+        } else if (this.getAttribute("id") === "play-again"){
+            window.gameContainer.reload();
+        }
+    });
+}
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}

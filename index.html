@@ -37,7 +37,7 @@
                 <h2>Are you ready?</h2>
             </div>
 
-            <button class="buttons" id="game-button" onclick="">PLAY</button>
+            <button class="buttons" id="game-button">PLAY</button>
 
         </div>
 
@@ -45,7 +45,7 @@
         <div class="hide container" id="gameplay-container">
 
             <div>
-                <h2>What flag is this?</h2>
+                <h2>WHAT FLAG IS THIS?</h2>
             </div>
             <!--Display flag image-->
             <div>
@@ -56,6 +56,7 @@
                 <button class="option buttons" onclick="checkAnswer(this)">flag 1</button>
                 <button class="option buttons" onclick="checkAnswer(this)">flag 2</button>
                 <button class="option buttons" onclick="checkAnswer(this)">flag 3</button>
+            
 
                 <!--Display player score-->
             <div id="score">Score: 0</div>
@@ -66,7 +67,7 @@
             <div class="message"></div>
 
             <!--Play again button-->
-            <button id="play-again" onClick="playAgain()" style="display: none;">
+            <button class="hide" id="play-again" onClick="playAgain()">
                 <img src="assets/images/repeat.png" alt="Play again" width="40px" height="40px">
             </button>
             </div>
@@ -74,7 +75,7 @@
     </main>
     
     <footer>
-        <button class="buttons" id="footer-home-button">HOME</button>
+        <button class="buttons" id="home-button">HOME</button>
     </footer>
 
     <script src="assets/js/script.js"></script>
