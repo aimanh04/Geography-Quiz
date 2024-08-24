@@ -1000,11 +1000,17 @@ const flags = [{
     img: 'assets/images/flags/zw.png'
 }
 ];
+// Variables
 let homePage = document.getElementById('game-container');
 let gameContainer = document.getElementById('gameplay-container');
 let playButton = document.getElementById('game-button');
 let homeButton = document.getElementById('home-button');
 let restartButton = document.getElementById('play-again');
+
+//Variables for tracking score and game progress
+let currentFlagIndex = 0;
+let score = 0;
+let shuffledFlags = [...flags];
 
 // Adding event listeners to buttons to start game play or bring back to home screen
 let buttons = document.getElementsByTagName("button");
@@ -1030,10 +1036,23 @@ for (let button of buttons) {
     });
 }
 
+//Function to shuffle elements of an array randomly
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
+}
+
+//Function to shuffle the "shuffledFlags" array
+function shuffleFlags() {
+    shuffledFlags = [...flags];
+    shuffleArray(shuffleArray);
+}
+
+//Function to update the total displayed flag count
+function updateTotalFlags() {
+    const totalFlags = flags.length;
+    document.getElementById('total-flags').textContent = `Flag: ${currentFlagIndex + 1} / ${totalFlags}`;
 }

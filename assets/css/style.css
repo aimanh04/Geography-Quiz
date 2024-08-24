@@ -177,4 +177,9 @@ div#gameplay-container {
         max-width: 70em;
         padding: 3em 3em;
     }
+
+    #gameplay-container{
+        max-width: 70em;
+        padding: 3em 3em;
+    }
 }
