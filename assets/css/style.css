@@ -78,8 +78,13 @@ p{
     transition: transform 0.2s ease;
 }
 
-.buttons:hover {
+/*Hover effect will*/
+.buttons:hover:not([disabled]) {
     transform: scale(0.9);
+}
+
+.buttons:disabled {
+    cursor: no-drop;
 }
 
 #headings-content-container {
