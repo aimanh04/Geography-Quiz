@@ -78,11 +78,12 @@ p{
     transition: transform 0.2s ease;
 }
 
-/*Hover effect will*/
+/*Hover effect will only work on non disabled buttons*/
 .buttons:hover:not([disabled]) {
     transform: scale(0.9);
 }
 
+/*Makes it clear that buttons can't be selected no more*/
 .buttons:disabled {
     cursor: no-drop;
 }
