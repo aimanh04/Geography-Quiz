@@ -110,13 +110,19 @@ div#gameplay-container {
     border-radius: 10px;
 }
 
-#flag-container {
+#flags {
+    display: flex;
     margin: 0 auto;
     align-items: center;
     max-width: 300px;
     max-height: auto;
     border-radius: 5px;
     margin: 10px 0;
+}
+
+#guess {
+    font-size: 15px;
+    margin: 10px;
 }
 
 .option {

@@ -44,32 +44,34 @@
         <!--Gameplay-->
         <div class="hide container" id="gameplay-container">
 
-            <div>
-                <h2>WHAT FLAG IS THIS?</h2>
+            <div id="questions">
+                <h2 id="question">Question goes here</h2>
             </div>
-            <!--Display flag image-->
-            <div>
-                <img id="flag-container" src="" alt="Random flag image">
-            </div>
+
+            <div id="guess">Select the correct flag</div>
 
             <div id="answers-buttons-container">
-                <button class="option buttons" onclick="checkAnswer(this)">flag 1</button>
-                <button class="option buttons" onclick="checkAnswer(this)">flag 2</button>
-                <button class="option buttons" onclick="checkAnswer(this)">flag 3</button>
+                <button class="option buttons" onclick="checkAnswer(0)">flag 1</button>
+                <button class="option buttons" onclick="checkAnswer(1)">flag 2</button>
+                <button class="option buttons" onclick="checkAnswer(2)">flag 3</button>
+            </div>
             
-
                 <!--Display player score-->
-            <div id="score">Score: 0</div>
+                <div id="score">Score: 0</div>
+                
+                <!--Display the current flag of total flags-->
+                <div id="total-flags">Flags: 0 / 0</div>
 
-            <!--Display the current flag of total flags-->
-            <div id="total-flags">Flags: 0 / 0</div>
+                <div class="message"></div>
 
-            <div class="message"></div>
+                <div>
+                    <button id="next-btn">Next</button>
+                </div>
 
-            <!--Play again button-->
-            <button class="hide" id="play-again" onClick="playAgain()">
-                <img src="assets/images/repeat.png" alt="Play again" width="40px" height="40px">
-            </button>
+                <!--Play again button-->
+                <button class="hide" id="play-again" onClick="playAgain()">
+                   <img src="assets/images/repeat.png" alt="Play again" width="40px" height="40px">
+                </button>
             </div>
         </div>
     </main>
