@@ -66,6 +66,7 @@ p{
 .buttons {
     width: 5.5em;
     height: 2.5em;
+    margin: 3px;
     background-color: black;
     color: var(--accent);
     border: 2px solid var(--accent);
@@ -174,6 +175,14 @@ div#gameplay-container {
 
 .message.wrong {
     color: red;
+}
+
+.correct {
+    background: #9aeabc;
+}
+
+.incorrect {
+    background: #ff9393;
 }
 
 /* Media query - tablets and larger (768px) */

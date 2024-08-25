@@ -3,7 +3,7 @@ const quizQuestions = [
         question : "Which country has the capital city Vienna?",
         answers : [
             { text : "Sweden", correct : false},
-            { text : "Switzerland", correct : false},
+            { text : "Italy", correct : false},
             { text : "Austria", correct : true}
         ]
     },
@@ -88,7 +88,7 @@ let playButton = document.getElementById('game-button');
 let homeButton = document.getElementById('home-button');
 let restartButton = document.getElementById('play-again');
 const questions = document.getElementById('question');
-const answerButton = document.getElementById('answers-buttons-container');
+const answerButtons = document.getElementById('answers-buttons-container');
 const nextButton = document.getElementById('next-btn');
 
 let currentQuestionIndex = 0;
@@ -134,12 +134,29 @@ function showQuestion() {
         const button = document.createElement("button");
         button.innerHTML = answer.text;
         button.classList.add("buttons");
-        answerButton.appendChild(button);
+        answerButtons.appendChild(button);
+        if(answer.correct){
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener('click', selectAnswer)
     });
 }
 
 function resetState() {
-    
+    nextButton.style.display = "none";
+    while(answerButtons.firstChild) {
+        answerButtons.removeChild(answerButtons.firstChild);
+    }
 };
+
+function selectAnswer(e) {
+    const selectedBtn = e.target;
+    const isCorrect = selectedBtn.dataset.correct === "true";
+    if(isCorrect) {
+        selectedBtn.classList.add("correct");
+    } else{
+        selectedBtn.classList.add("incorrect");
+    }
+}
 
 startQuiz();
