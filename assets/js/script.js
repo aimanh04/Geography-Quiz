@@ -1,4 +1,4 @@
-const quizQuestions = [
+const questions = [
     {
         question : "Which country has the capital city Vienna?",
         answers : [
@@ -87,7 +87,7 @@ let gameContainer = document.getElementById('gameplay-container');
 let playButton = document.getElementById('game-button');
 let homeButton = document.getElementById('home-button');
 let restartButton = document.getElementById('play-again');
-const questions = document.getElementById('question');
+const questionElement = document.getElementById('question');
 const answerButtons = document.getElementById('answers-buttons-container');
 const nextButton = document.getElementById('next-btn');
 
@@ -126,9 +126,9 @@ function startQuiz() {
 
 function showQuestion() {
     resetState();
-    let currentQuestion = quizQuestions[currentQuestionIndex];
+    let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
-    questions.innerHTML = questionNo + '.' + currentQuestion.question;
+    questionElement.innerHTML = questionNo + '.' + currentQuestion.question;
 
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
@@ -143,7 +143,7 @@ function showQuestion() {
 }
 
 function resetState() {
-
+    nextButton.style.display = "none";
     while(answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
     }
@@ -167,6 +167,13 @@ function selectAnswer(e) {
     nextButton.style.display = "block";
 };
 
+function showScore() {
+    resetState();
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    nextButton.innerHTML = "Play Again";
+    nextButton.style.display = "block";
+}
+
 function handleNextButton() {
     currentQuestionIndex++;
     if(currentQuestionIndex < questions.length){
@@ -177,7 +184,7 @@ function handleNextButton() {
 }
 
 nextButton.addEventListener("click", () => {
-    if(currentQuestionIndex < quizQuestions.length){
+    if(currentQuestionIndex < questions.length){
         handleNextButton();
     } else{
         startQuiz()
@@ -185,3 +192,6 @@ nextButton.addEventListener("click", () => {
 });
 
 startQuiz();
+
+
+
