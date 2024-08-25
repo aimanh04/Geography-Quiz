@@ -143,7 +143,7 @@ function showQuestion() {
 }
 
 function resetState() {
-    nextButton.style.display = "none";
+
     while(answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
     }
@@ -157,6 +157,13 @@ function selectAnswer(e) {
     } else{
         selectedBtn.classList.add("incorrect");
     }
+    Array.from(answerButtons.children).forEach(button => {
+        if(button.dataset.correct === "true"){
+            button.classList.add("correct");
+        }
+        button.disabled = true;
+    });
+    nextButton.style.display = "block";
 }
 
 startQuiz();

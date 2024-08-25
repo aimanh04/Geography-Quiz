@@ -169,6 +169,20 @@ div#gameplay-container {
     transform: scale(1.1);
 }
 
+#next-btn {
+    background: #001e4d;
+    color: #fff;
+    font-weight: 600;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: auto;
+    border-radius: 6px;
+    cursor: pointer;
+    transform: scale(0.9);
+    display: none;
+}
+
 .message.correct {
     color: green;
 }
