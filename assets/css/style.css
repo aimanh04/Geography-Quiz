@@ -117,9 +117,8 @@ div#gameplay-container {
     border-radius: 10px;
 }
 
-#guess {
-    font-size: 15px;
-    margin: 10px;
+#questions {
+    padding-bottom: 40px;
 }
 
 /*Options buttons*/
