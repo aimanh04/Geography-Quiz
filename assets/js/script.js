@@ -1,3 +1,4 @@
+//The questions, options, answer array
 const questions = [
     {
         question : "Which country has the capital city Vienna?",
@@ -93,6 +94,7 @@ const questionElement = document.getElementById('question');
 const answerButtons = document.getElementById('answers-buttons-container');
 const nextButton = document.getElementById('next-btn');
 
+// Variables for tracking game progress
 let currentQuestionIndex = 0;
 let score = 0;
 let correctAnswers = 0;
@@ -121,7 +123,12 @@ for (let button of buttons) {
     });
 } 
 
-
+/**
+ * Function to start the quiz when the button is clicked
+ * When starting the quiz the questions and scores will reset the currentQuestionIndex, score and
+ * the correct and wrong answers display.
+ * Then send you to the next function
+ */
 function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
@@ -131,6 +138,13 @@ function startQuiz() {
     showQuestion();
 }
 
+/**This function display the questions and option answer when gameplay is started.
+ * First set of question and answers from the Questions array will be added.
+ * Then depending on what question is displayed the question number will
+ * show in this case if the currentQuestionIndex is 0(the first question) the question number will be 1 etc.
+ * Then the text on the buttons for the choices in the quiz will go to answers in the array.
+ * Then make the buttons clickable with click function.
+ */
 function showQuestion() {
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
@@ -149,6 +163,7 @@ function showQuestion() {
     });
 }
 
+/**This function will reset the previous question and answer */
 function resetState() {
     nextButton.style.display = "none";
     while(answerButtons.firstChild) {
@@ -156,6 +171,12 @@ function resetState() {
     }
 };
 
+/**This function will check if your answer you clicked on is true or not
+ * Whether you choose the correct or incorrect answer the background color
+ * will change to green or red.
+ * Then the correctAnswers and incorrectAnswers will increment when you choose right or wrong answer.
+ * Then it will disable buttons from being clicked after you selected your answer and the next button will pop up.
+ */
 function selectAnswer(e) {
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === "true";
@@ -178,6 +199,9 @@ function selectAnswer(e) {
     nextButton.style.display = "block";
 };
 
+/**This function will send you to a new question when you click the next button.
+ * Else if you've reached the end of the questions you will be sent to the showScore function to see your final score.
+ */
 function handleNextButton() {
     currentQuestionIndex++;
     if(currentQuestionIndex < questions.length){
@@ -187,6 +211,7 @@ function handleNextButton() {
     }
 }
 
+/**This function will show your final score when you finished the game and suggest you to play again */
 function showScore() {
     resetState();
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
@@ -194,6 +219,9 @@ function showScore() {
     nextButton.style.display = "block";
 }
 
+/**This will send you to the next question and with handleNextButton function for new question.
+ * Else if you finished the game it will send you to startQuiz function to restart the game.
+ */
 nextButton.addEventListener("click", () => {
     if(currentQuestionIndex < questions.length){
         handleNextButton();
