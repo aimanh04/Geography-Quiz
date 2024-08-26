@@ -117,21 +117,12 @@ div#gameplay-container {
     border-radius: 10px;
 }
 
-#flags {
-    display: flex;
-    margin: 0 auto;
-    align-items: center;
-    max-width: 300px;
-    max-height: auto;
-    border-radius: 5px;
-    margin: 10px 0;
-}
-
 #guess {
     font-size: 15px;
     margin: 10px;
 }
 
+/*Options buttons*/
 .option {
     width: 5.5em;
     height: 2.5em;
@@ -144,6 +135,32 @@ div#gameplay-container {
     text-align: center;
     cursor: pointer;
     transition: transform 0.2s ease;
+}
+
+/* For score counter */
+#correct {
+    font-size: 20px;
+    color: #fff;
+    margin: 10px 32%;
+    background-color: var(--accent);
+    border-radius: 6px;
+    padding: 2px 0;
+}
+
+.score-area {
+    margin: 5px auto;
+    width: 60%;
+    font-size: 1.2rem;
+}
+
+#score {
+    color: green;
+    font-weight: bold;
+}
+
+#incorrect {
+    color: red;
+    font-weight: bold;
 }
 
 #total-flags {

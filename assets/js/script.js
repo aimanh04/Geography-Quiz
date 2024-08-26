@@ -87,12 +87,16 @@ let gameContainer = document.getElementById('gameplay-container');
 let playButton = document.getElementById('game-button');
 let homeButton = document.getElementById('home-button');
 let restartButton = document.getElementById('play-again');
+let correctDisplay = document.getElementById('score');
+let incorrectDisplay = document.getElementById('incorrect');
 const questionElement = document.getElementById('question');
 const answerButtons = document.getElementById('answers-buttons-container');
 const nextButton = document.getElementById('next-btn');
 
 let currentQuestionIndex = 0;
 let score = 0;
+let correctAnswers = 0;
+let incorrectAnswers = 0;
 
 // Adding event listeners to buttons to start game play or bring back to home screen
 let buttons = document.getElementsByTagName("button");
@@ -121,6 +125,8 @@ for (let button of buttons) {
 function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
+    correctAnswers = 0;
+    incorrectAnswers = 0;
     nextButton.innerHTML = "Next";
     showQuestion();
 }
@@ -156,8 +162,12 @@ function selectAnswer(e) {
     if(isCorrect) {
         selectedBtn.classList.add("correct");
         score++;
+        correctAnswers++;
+        correctDisplay.innerText = correctAnswers;
     } else{
         selectedBtn.classList.add("incorrect");
+        incorrectAnswers++;
+        incorrectDisplay.innerText = incorrectAnswers;
     }
     Array.from(answerButtons.children).forEach(button => {
         if(button.dataset.correct === "true"){
@@ -177,11 +187,20 @@ function handleNextButton() {
     }
 }
 
+function showScore() {
+    resetState();
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    nextButton.innerHTML = "Play Again";
+    nextButton.style.display = "block";
+}
+
 nextButton.addEventListener("click", () => {
     if(currentQuestionIndex < questions.length){
         handleNextButton();
     } else{
         startQuiz()
+        correctDisplay.innerText = 0;
+        incorrectDisplay.innerText = 0;
     }
 });
 
