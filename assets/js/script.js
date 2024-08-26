@@ -4,7 +4,7 @@ const questions = [
         answers : [
             { text : "Sweden", correct : false},
             { text : "Italy", correct : false},
-            { text : "Austria", correct : true}
+            { text : "Austria", correct : true},
         ]
     },
     {
@@ -58,7 +58,7 @@ const questions = [
     {
         question : "Which African country is located in the west coast of Africa?",
         answers : [
-            { text : "Nigeria", correct : false},
+            { text : "Namibia", correct : false},
             { text : "Ghana", correct : true},
             { text : "Somalia", correct : false}
         ]
@@ -115,7 +115,8 @@ for (let button of buttons) {
             window.gameContainer.reload();
         }
     });
-}
+} 
+
 
 function startQuiz() {
     currentQuestionIndex = 0;
@@ -166,13 +167,6 @@ function selectAnswer(e) {
     });
     nextButton.style.display = "block";
 };
-
-function showScore() {
-    resetState();
-    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
-    nextButton.innerHTML = "Play Again";
-    nextButton.style.display = "block";
-}
 
 function handleNextButton() {
     currentQuestionIndex++;
