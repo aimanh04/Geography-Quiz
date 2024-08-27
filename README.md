@@ -50,12 +50,30 @@ The font I chose for my website is:
 
 ## Technologies Used
 
+### Languages
+
+- HTML 
+- CSS
+- JavaScript
+
+### Frameworks, Libraries and Programes used
+
+- [GitHub](https://GitHub.com/) - To save and store files for the website
+- [Gitpod](https://gitpod.io/) - To use as workspace to code website
+- [Google Fonts](https://fonts.google.com/) - To import fonts into website
+- [Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools) - Used to troubleshoot, test the sites responsiveness, check the page's elements and style elements
+- [PNG arts](https://www.pngarts.com/?s=globe+) - Used for the wbesites favicon
+- [Chrome Lighthouse](https://developers.google.com/web/tools/lighthouse) - To test the websites performance and accesibility
+- [Am I Responsive](https://ui.dev/amiresponsive) - Used to test responsivness
+- [Image Resizer](https://imageresizer.com/crop-image/editor) - Used to resize images for this README.
+
 ## Testing
 
 ## Deployment
 
+### Deployment Steps
 The website has been deployed to GitHub. Here were the steps as followed to deploy:
-1. Log in to GitHub.
+1. Log in to [GitHub](https://github.com/).
 2. In your GitHub repository, navigate to the settings tab.
 3. Select "Pages" on the Codes and automation section on the left-hand sidebar.
 4. Select the following:
@@ -64,6 +82,20 @@ The website has been deployed to GitHub. Here were the steps as followed to depl
 - Folder is set to / (root).
 5. Click save next to /root.
 6. Go back to the code tab. Refresh your repository and a deployment section will show up with your deployed project.
+
+### Forking the Github Repository
+The steps to fork the github repository are:
+1. Log in to your [GitHub](https://github.com/).
+2. Go to the repository for Geography Quiz.
+3. Click fork on the right hand side of the screen.
+
+### Making a local clone
+To clone this repository, do the following steps:
+1. Log in to your [GitHub](https://github.com/).
+2. Go to the repository for this project [Geography Quiz](https://github.com/aimanh04/Geography-Quiz/tree/main).
+3. Click on the code button and select whether you would like to clone with HTTPS, SSH or GitHub CLI and then copy the URL to your clipboard.
+4. Open the terminal in your selected code editor and change the current working directory to the location of where you want the cloned directory.
+5. Type "git clone" into the terminal, paste the link you copied and press enter.
 
 The live link to the website is here - [Geography Quiz](https://aimanh04.github.io/Geography-Quiz/)
 
