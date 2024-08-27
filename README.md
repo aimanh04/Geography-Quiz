@@ -48,6 +48,47 @@ The font I chose for my website is:
 
 ## Gameplay Breakdown
 
+### Testing the website
+
+| Features | Test steps | Expected Outcome | Result |
+|-----    |----------    |----------   |------|
+| Loading of the page |1. Open the website with its URL. 2. Take note of the elements presented on the page.| The header, main section, and the button PLAY are displayed correctly. | Pass |
+| Play Button Onclick | 1. Click the 'Play' button. 2. Observe the changes on the screen.| The main section of the starting page is hidden and transitions to the gameplay. The first question and answer buttons appear, the scoring area becomes visible, and the 'Play Again' button displays correctly after the game is completed. | Pass |
+| Answer Buttons Onclick | 1. Click on one of the answer buttons. 2. Take note of the score area and buttons.| Score area updates with correct or incorrect answer count. Answer buttons turn green or red depending on whether you answered correctly or not. After that next button shows up to redirect you to the next question with possible answers. The Play Again button appears when you complete the quiz. | Pass |
+| Quiz completed | 1. Answer all questions in the game. 2. Observe the final screen.| The gameplay section and questions gets hidden, and a score result message with score details appears. Under the section, the Play Again button appears.| Pass |
+| Play Again Button Onclick | 1. Click the ’Play Again’ button at the end of quiz. 2. Observe the transition back to the quiz. |At the end of the quiz the next button will turn into play again button. When you click the play again button you will be redirected to the game.| Pass |
+
+### Further explanation
+
+1. Loading of the page
+- Open the website [Geography Quiz](https://aimanh04.github.io/Geography-Quiz/).
+- Expect that the header, main section and the play button is displayed.
+- Status: Passed
+![Loading Home Page](assets/images/readme-images/loading-page.png)
+
+2. Play Onclick
+- Click the play button and watch how it redirects you to the gameplay.
+- Expect the main section of the home page hidden and transition to the game.
+- Status: Passed
+![Play Button](assets/images/readme-images/playnow.png)
+
+3. Answer Buttons Onclick
+- Click on one of the answer buttons and take note of the change on the webpage.
+- Expect the score area to update and the button will either turn green or red whether you chose the correct or incorrect answer and observe the Next button appearing to redirct you to the next question.
+- Status: Passed
+![Answer Buttons](assets/images/readme-images/answer-buttons.png)
+
+4. Quiz completed
+- Answer all questions in the game and observe the final score screen.
+- Expect the gameplay and questions get hidden and score result message with score details and Play again button appears.
+- Status: Passed
+![Quiz Score Page](assets/images/readme-images/score-page.png)
+
+5. Play again button Onclick
+- Click the play again button at the end of the game.
+- Expect that you will be redirected back to the game after clicking the play again button.
+- Status: Passed
+
 ## Technologies Used
 
 ### Languages
