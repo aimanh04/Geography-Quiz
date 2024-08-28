@@ -8,6 +8,14 @@ This project is a web-based quiz game quiz to test your general geography knowle
 
 ## Table of Contents
 
+- [User Stories](#user-stories)
+- [Website Design](#website-design)
+- [Gameplay Breakdown](#gameplay-breakdown)
+- [Technologies Used](#technologies-used)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
+
 ## User Stories
 
 ### First Time User Stories
@@ -181,3 +189,17 @@ To clone this repository, do the following steps:
 The live link to the website is here - [Geography Quiz](https://aimanh04.github.io/Geography-Quiz/)
 
 ## Credits
+
+### Special Thanks To
+
+- Code Institutes learning material from the diploma-educations and the essentials on HTML, CSS and JavaScript. Especially the Love Running walkthrough project.
+
+- [Make Quiz Youtube Tutorial by GreatStack](https://www.youtube.com/watch?v=PBcqGxrr9g8&t=14s) - This video was extremely helpful for me to understand the structure of a quiz game and I relied heavily on the Youtube video made by GreatStack.
+
+- [ChatGPT](https://chatgpt.com/) - Used to create texts and paragraphs on my website when I lacked creativity.
+
+- [W3CSchools](https://www.w3schools.com/)
+
+- [Stack Overflow](https://stackoverflow.com/)
+
+- [MDN](https://developer.mozilla.org/en-US/)
