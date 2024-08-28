@@ -197,7 +197,7 @@ function selectAnswer(e) {
         button.disabled = true;
     });
     nextButton.style.display = "block";
-};
+}
 
 /**This function will send you to a new question when you click the next button.
  * Else if you've reached the end of the questions you will be sent to the showScore function to see your final score.
@@ -226,7 +226,7 @@ nextButton.addEventListener("click", () => {
     if(currentQuestionIndex < questions.length){
         handleNextButton();
     } else{
-        startQuiz()
+        startQuiz();
         correctDisplay.innerText = 0;
         incorrectDisplay.innerText = 0;
     }

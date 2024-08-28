@@ -22,7 +22,7 @@ This project is a web-based quiz game quiz to test your general geography knowle
 
 ## Website Design
 ### Color Scheme
-![Color schem palette](assets/images/readme-images/colors.png)
+![Color scheme palette](assets/images/readme-images/colors.png)
 The main colors of the website consists of the first three colors on the palette which is Charcoal, teal and white. Other minor colors were also used like oxford blue for the next button, green and red for the score counter.
 
 Colors palette created by [coolors](https://coolors.co/) website.
@@ -107,8 +107,48 @@ The font I chose for my website is:
 - [Chrome Lighthouse](https://developers.google.com/web/tools/lighthouse) - To test the websites performance and accesibility
 - [Am I Responsive](https://ui.dev/amiresponsive) - Used to test responsivness
 - [Image Resizer](https://imageresizer.com/crop-image/editor) - Used to resize images for this README.
+- [Coolors](https://coolors.co/) - Used to create color palette.
 
 ## Testing
+
+### Validator Testing
+#### HTML
+No errors were found on the webpage quiz when testing it with the W3C Markup Validator.
+
+- [Geography Quiz W3C HTML Validator results](https://validator.w3.org/nu/?doc=https%3A%2F%2Faimanh04.github.io%2FGeography-Quiz%2F)
+
+#### CSS
+No errors were found for the CSS Stylesheet from the W3C CSS Validator.
+
+- [CSS W3C Jigsaw Stylesheet Validator results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Faimanh04.github.io%2FGeography-Quiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)
+
+#### JavaScript
+No errors were found on the JSHint tester.
+
+### Manual Testing
+
+Website has been tested on:
+
+- Google Chrome
+- Mozilla Firefox
+- Safari
+- Macbook Air
+- Iphone 12 Pro
+- Samsung Galaxy s20
+
+### Lighthouse Testing
+The chrome extension lighthouse was used to test the website performance and accesibility. Here are the results:
+
+#### Desktop
+![Lighthouse Results Desktop](assets/images/readme-images/lighthouse-desktop.png)
+
+#### Mobile
+![Lighthouse Results Mobile](assets/images/readme-images/lighthouse-mobile.png)
+
+### Unfixed bugs
+
+- No known bugs has been left unfixed
+
 
 ## Deployment
 
